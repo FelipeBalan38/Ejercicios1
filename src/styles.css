@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+#header1{
+    color:azure;
+    background-color:darkslateblue;
+}
+#Principal{
+    width: 1850px;
+    height: 800px;
+    margin: 1em;
+    border-radius: 1em;
+}
+#texto1{
+    height: 100%;
+    width: 70%;
+    background: #ccc;
+    padding: 1em;
+    float: left;
+}
+#texto2{
+    height: 100%;
+    width: 30%;
+    background:crimson;
+    padding: 1em;
+    float: right;
+}
+#texto3{
+    height: 100%;
+    width: 25%;
+    background:darkslateblue;
+    padding: 1em;
+    float: left;
+}
+#texto4{
+    height: 100%;
+    width: 25%;
+    background: white;
+    padding: 1em;
+    float: left;
+}
+#texto5{
+    height: 100%;
+    width: 25%;
+    background: darkslateblue;
+    padding: 1em;
+    float: left;
+}
+#texto6{
+    height: 100%;
+    width: 25%;
+    background: white;
+    padding: 1em;
+    float: left;
+}
+#footer1{
+    color:azure;
+    background-color:darkslateblue;
+}
+*/
+
+/*.Container1
+{
+    margin: 1em;
+    border: 0.3em solid black;
+    padding: 0.3em;
+}
+#Container2
+{
+    margin: 1em;
+    /*border: 0.3em solid black; aqui va un fin de coment
+}
+.Texto1
+{
+    width: 31.5%;
+    margin: 0.5em;
+    padding: 1em;
+    float: left;
+}
+.Boton
+{
+    text-align: center;
+    margin: 0.5em;
+}
+#footer1
+{
+    text-align: center;
+}*/
