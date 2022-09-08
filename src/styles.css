@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files
+/* You can add global styles to this file, and also import other style files*/
 #header1{
     color:azure;
     background-color:darkslateblue;
@@ -55,7 +55,6 @@
     color:azure;
     background-color:darkslateblue;
 }
-*/
 
 /*.Container1
 {
@@ -66,7 +65,7 @@
 #Container2
 {
     margin: 1em;
-    /*border: 0.3em solid black; aqui va un fin de coment
+    /*border: 0.3em solid black;
 }
 .Texto1
 {
