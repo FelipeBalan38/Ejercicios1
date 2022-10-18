@@ -1,0 +1,33 @@
+.carta
+{
+    background-color: white;
+    border-radius: 5px;
+    padding: 1em;
+}
+u
+{
+    border-bottom:1px dotted #9999CC;
+    text-decoration:none;
+    color: blue;
+}
+.colored
+{
+    background-color:azure;
+}
+.btn-warning
+{
+    background-color: orangered;
+    color: white;
+}
+.color1
+{
+    color: green;
+}
+.color2
+{
+    color:cornflowerblue;
+}
+.color3
+{
+    color: orangered;
+}

@@ -1,0 +1,7 @@
+.fondo
+{
+    background-image: url(/assets/iconos/fondo.jpg);
+    background-size: cover;
+    height: max-content;
+    background-color: green;
+}
