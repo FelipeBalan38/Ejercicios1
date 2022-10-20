@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Usuario {
-  nombre: String;
-  email: String;
-  question: String;
-}
+import { UsuarioService } from 'src/app/Services/usuario.service';
+import { Usuario } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-forms',
@@ -13,20 +9,13 @@ interface Usuario {
 })
 export class FormsComponent implements OnInit {
 
-  datos! : any[];
+  usuarios! : Usuario[];
 
-  model = {
-    nombre: '',
-    email: '',
-    question: ''
-  }
-  constructor() { }
-
+  constructor(private readonly usuarioService:UsuarioService) { }
+  
   ngOnInit(): void {
+    this.usuarioService.list().subscribe(usuarios=>{
+      this.usuarios = [...this.usuarios];
+    })
   }
-  onSave(): void{
-    this.datos.push(this.model)
-    /*console.log(this.datos);*/
-  }
-
 }
