@@ -18,4 +18,14 @@ export class FormsComponent implements OnInit {
       this.usuarios = [...this.usuarios];
     })
   }
+  onSubmit(values:Usuario):void{
+    this.addUsuario(values);
+  }
+  addUsuario(usuario:Usuario){
+    this.usuarioService.create(usuario).subscribe(res=>
+      {
+        this.usuarios.push(usuario)
+      }
+      )
+  }
 }

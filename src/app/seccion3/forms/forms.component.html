@@ -16,9 +16,9 @@
           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
               <!----------------------Aquí va el primer formulario----------------->
               <br>
-              <form #usuarioForm="ngForm" >
+              <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)">
               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Default input" ngModel required="" style="background-color:aliceblue;">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Default input" ngModel required="" style="background-color:aliceblue;">
 
                   <label for="floatingInput">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
