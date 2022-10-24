@@ -9,23 +9,23 @@ import { Usuario } from 'src/app/shared/interfaces';
 })
 export class FormsComponent implements OnInit {
 
-  usuarios! : Usuario[];
+  usuarios: Usuario[] = [];
 
   constructor(private readonly usuarioService:UsuarioService) { }
   
   ngOnInit(): void {
     this.usuarioService.list().subscribe(usuarios=>{
-      this.usuarios = [...this.usuarios];
-    })
+      this.usuarios = [...usuarios];
+    });
   }
+
   onSubmit(values:Usuario):void{
     this.addUsuario(values);
   }
+
   addUsuario(usuario:Usuario){
-    this.usuarioService.create(usuario).subscribe(res=>
-      {
-        this.usuarios.push(usuario)
-      }
-      )
+    this.usuarioService.create(usuario).subscribe(res=>{
+        this.usuarios.push(usuario);
+      });
   }
 }

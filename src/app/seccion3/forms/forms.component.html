@@ -4,7 +4,7 @@
     <h1 class="text-center">Customer Center</h1>
     <p class="text-center">To help us assist you most efficiently, please log in to our Customer Support Center:</p>
   </div>
-  <pre>{{usuarioForm.value|json}}</pre>
+ <!--<pre>{{usuarioForm.value|json}}</pre>-->
     <div class="container text-justify border border-5" style="background-color:white ;">
       <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -56,7 +56,8 @@
               <!----------------------------Segundo formulario----------------------->
           </div>
           <br>
-          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+          <!--
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="floatingInput" placeholder="Default input" [(ngModel)]="usuarios" style="background-color:aliceblue;">
               <label for="floatingInput">
@@ -82,11 +83,13 @@
           <br>
   
           </div>
+        -->
         </div>
-  </div>
+    </div>
 
 </div>
-<div>
+
+<div class="container">
   <table class="table">
     <thead>
       <tr>
@@ -97,11 +100,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>{{usuarios}}</td>
-        <td>{{usuarios}}</td>
-        <td>{{usuarios}}</td>
+      <tr *ngFor="let usuario of usuarios; let i=index;">
+        <td>{{i+1}}</td>
+        <td>{{usuario.name}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.question}}</td>
       </tr>
     </tbody>
   </table>
