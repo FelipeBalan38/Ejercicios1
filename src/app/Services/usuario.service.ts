@@ -9,7 +9,7 @@ import {Usuario} from 'src/app/shared/interfaces';
 export class UsuarioService {
 
   usuario!: Usuario
-  private readonly url = 'https://crudcrud.com/api/22df4901a5f04ba980a3b7985cece027/usuarios'; 
+  private readonly url = 'https://crudcrud.com/api/8b3c85af3aa54941a350cc61f589a58a/usuarios'; 
   constructor(private readonly http:HttpClient) { }
 
   create(usuario:Usuario):Observable<Usuario>{
@@ -24,7 +24,7 @@ export class UsuarioService {
     return this.http.get<Usuario>(`${this.url}/${id}`)
   }
 
-  update(usuario:Usuario):Observable<void>{
+  updateUser(usuario:Usuario):Observable<void>{
     return this.http.put<void>(`${this.url}/${usuario._id}`,usuario)
   }
 

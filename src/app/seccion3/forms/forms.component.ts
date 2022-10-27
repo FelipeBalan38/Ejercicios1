@@ -29,10 +29,31 @@ export class FormsComponent implements OnInit {
         this.usuarios.push(usuario);
       });
   }
+
   deleteUsuario(id:String){
-    console.log("id de usuario ->"+id);
+    //console.log("id de usuario ->"+id);
+    if(confirm('¿Desea eliminar al usuario?')){
+      this.usuarioService.deleteUser(id).subscribe(() => {
+        const tempArr = this.usuarios.filter(usuario => usuario._id !== id);
+        this.usuarios = [...tempArr];
+      });
+    }
   }
-  editUsuario(id:String){
-    console.log("id de usuario ->"+id)
+
+  updateUsuario(usuario:Usuario){
+    //console.log("id de usuario ->"+usuario._id)
+    this.usuarioService.updateUser(usuario).subscribe(res =>{
+      //const tempArr = this.usuarios.filter(values => values._id !== usuario._id);
+      //this.usuarios = [...tempArr,usuario];
+      console.log("Entro");
+    })
   }
+
+  editUsuario(id:String, change:Usuario):void{
+    console.log(id);
+    console.log(change);
+    change._id = id;
+    this.updateUsuario(change)
+  }
+
 }
