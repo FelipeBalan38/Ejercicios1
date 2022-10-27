@@ -1,3 +1,4 @@
+import { formatCurrency } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 import { Usuario } from 'src/app/shared/interfaces';
@@ -27,5 +28,11 @@ export class FormsComponent implements OnInit {
     this.usuarioService.create(usuario).subscribe(res=>{
         this.usuarios.push(usuario);
       });
+  }
+  deleteUsuario(id:String){
+    console.log("id de usuario ->"+id);
+  }
+  editUsuario(id:String){
+    console.log("id de usuario ->"+id)
   }
 }
